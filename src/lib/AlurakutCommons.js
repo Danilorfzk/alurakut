@@ -4,6 +4,7 @@ import NextLink from 'next/link';
 
 const BASE_URL = 'http://alurakut.vercel.app/';
 const v = '1';
+const githubUser = 'Danilorfzk';
 
 function Link({ href, children, ...props }) {
   return (
@@ -79,7 +80,16 @@ AlurakutMenu.Wrapper = styled.header`
     > div {
       max-width: 400px;
       margin: auto;
+
+      > img {
+        max-width: 260px; /* Máximo da largura da imagem */
+        width: 100%;
+        max-height: 300px; /* Máximo da altura da imagem */
+        min-height: auto;
+        margin: auto;
+      }
     }
+
     a {
       font-size: 18px;
     }
@@ -166,8 +176,8 @@ AlurakutMenu.Logo = styled.img`
   border-radius: 1000px;
   height: 34px;
 `;
-
-function AlurakutMenuProfileSidebar({ githubUser }) {
+//{ githubUser }
+function AlurakutMenuProfileSidebar() {
   return (
     <div className='alurakutMenuProfileSidebar'>
       <div>
@@ -236,6 +246,7 @@ AlurakutProfileSidebarMenuDefault.Wrapper = styled.div`
     align-items: center;
     justify-content: flex-start;
     text-decoration: none;
+
     img {
       width: 16px;
       height: 16px;
